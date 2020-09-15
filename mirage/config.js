@@ -10,6 +10,12 @@ export default function () {
     //   ],
     // };
   });
+  this.post("/movies", (schema, request) => {
+    let attrs = JSON.parse(request.requestBody);
+    schema.movies.create(attrs);
+    console.log("movie added");
+    return attrs;
+  });
 
   // These comments are here to help you get started. Feel free to delete them.
 

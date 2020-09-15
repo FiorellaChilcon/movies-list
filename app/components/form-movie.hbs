@@ -1,0 +1,27 @@
+<form {{on "submit" this.onSubmit}}
+  class="m-8 flex justify-content items-center flex-col bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  <label class="py-4">
+    <span>Genre </span> <br>
+    <input type="text" id="genre"
+      class="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+  </label>
+  <label class="py-4">
+    <span>Title </span> <br>
+    <input id="title"
+      class="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="text" />
+  </label>
+  <label class="py-4">
+    <span>Year </span> <br>
+    <input id="year" class="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none
+      focus:shadow-outline" type="number" />
+  </label>
+  {{#if this.empty}}
+  <p class="text-sm text-red-700 font-bold">All fields are necessary</p>
+  {{/if}}
+  <button
+    class="my-10 w-20 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    type="submit">
+    Add
+  </button>
+</form>
