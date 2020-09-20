@@ -18,7 +18,9 @@ const purgeCSS = {
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      enabled: false,
+    },
     postcssOptions: {
       compile: {
         plugins: [
